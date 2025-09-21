@@ -7,7 +7,7 @@ version = project.mod_version
 group = project.maven_group
 
 base {
-    var buildNumber = System.getenv("GITHUB_RUN_NUMBER")
+    var buildNumber = System.getenv("GITHUB_RUN_NUMBER") // for github actions people
     archivesName = "${project.archives_base_name}+${project.minecraft_version}" + (buildNumber != null ? "-build.${buildNumber}" : "")
 }
 
